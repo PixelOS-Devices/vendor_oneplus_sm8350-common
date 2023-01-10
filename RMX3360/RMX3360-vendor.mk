@@ -15,7 +15,7 @@ PRODUCT_COPY_FILES += \
     vendor/oplus/RMX3360/proprietary/odm/etc/acdbdata/Hdmi_cal.acdb:$(TARGET_COPY_OUT_ODM)/etc/acdbdata/Hdmi_cal.acdb \
     vendor/oplus/RMX3360/proprietary/odm/etc/acdbdata/Headset_cal.acdb:$(TARGET_COPY_OUT_ODM)/etc/acdbdata/Headset_cal.acdb \
     vendor/oplus/RMX3360/proprietary/odm/etc/acdbdata/Speaker_cal.acdb:$(TARGET_COPY_OUT_ODM)/etc/acdbdata/Speaker_cal.acdb \
-    vendor/oplus/RMX3360/proprietary/odm/etc/bt/msnv11_ch1.bin:$(TARGET_COPY_OUT_ODM)/etc/bt/msnv11_ch1.bin \
+    vendor/oplus/RMX3360/proprietary/odm/etc/bt/msnv11.bin:$(TARGET_COPY_OUT_ODM)/etc/bt/msnv11.bin \
     vendor/oplus/RMX3360/proprietary/odm/etc/camera/CameraHWConfiguration.config:$(TARGET_COPY_OUT_ODM)/etc/camera/CameraHWConfiguration.config \
     vendor/oplus/RMX3360/proprietary/odm/etc/camera/anc_cl_kernel.cache:$(TARGET_COPY_OUT_ODM)/etc/camera/anc_cl_kernel.cache \
     vendor/oplus/RMX3360/proprietary/odm/etc/camera/anc_cl_kernel_ins.cache:$(TARGET_COPY_OUT_ODM)/etc/camera/anc_cl_kernel_ins.cache \
@@ -24,6 +24,7 @@ PRODUCT_COPY_FILES += \
     vendor/oplus/RMX3360/proprietary/odm/etc/camera/arc_golden.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/arc_golden.bin \
     vendor/oplus/RMX3360/proprietary/odm/etc/camera/camera_engmode.xml:$(TARGET_COPY_OUT_ODM)/etc/camera/camera_engmode.xml \
     vendor/oplus/RMX3360/proprietary/odm/etc/camera/config/camera_unit_config:$(TARGET_COPY_OUT_ODM)/etc/camera/config/camera_unit_config \
+    vendor/oplus/RMX3360/proprietary/odm/etc/camera/config/camera_unit_feature_config.protobuf:$(TARGET_COPY_OUT_ODM)/etc/camera/config/camera_unit_feature_config.protobuf \
     vendor/oplus/RMX3360/proprietary/odm/etc/camera/config/hi846:$(TARGET_COPY_OUT_ODM)/etc/camera/config/hi846 \
     vendor/oplus/RMX3360/proprietary/odm/etc/camera/config/imx615:$(TARGET_COPY_OUT_ODM)/etc/camera/config/imx615 \
     vendor/oplus/RMX3360/proprietary/odm/etc/camera/config/oplus_camera_algo_switch_config:$(TARGET_COPY_OUT_ODM)/etc/camera/config/oplus_camera_algo_switch_config \
@@ -261,6 +262,7 @@ PRODUCT_COPY_FILES += \
     vendor/oplus/RMX3360/proprietary/odm/lib64/liboplus_service.so:$(TARGET_COPY_OUT_ODM)/lib64/liboplus_service.so \
     vendor/oplus/RMX3360/proprietary/odm/lib64/liboplusvppfilter.so:$(TARGET_COPY_OUT_ODM)/lib64/liboplusvppfilter.so \
     vendor/oplus/RMX3360/proprietary/odm/lib64/libormshalclient.so:$(TARGET_COPY_OUT_ODM)/lib64/libormshalclient.so \
+    vendor/oplus/RMX3360/proprietary/odm/lib64/libosensehalclient.so:$(TARGET_COPY_OUT_ODM)/lib64/libosensehalclient.so \
     vendor/oplus/RMX3360/proprietary/odm/lib64/libosie_process.so:$(TARGET_COPY_OUT_ODM)/lib64/libosie_process.so \
     vendor/oplus/RMX3360/proprietary/odm/lib64/libosie_stub.so:$(TARGET_COPY_OUT_ODM)/lib64/libosie_stub.so \
     vendor/oplus/RMX3360/proprietary/odm/lib64/libsnpe_dsp_domains_v2.so:$(TARGET_COPY_OUT_ODM)/lib64/libsnpe_dsp_domains_v2.so \
@@ -277,6 +279,7 @@ PRODUCT_COPY_FILES += \
     vendor/oplus/RMX3360/proprietary/odm/lib64/libwatermark_photo.so:$(TARGET_COPY_OUT_ODM)/lib64/libwatermark_photo.so \
     vendor/oplus/RMX3360/proprietary/odm/lib64/vendor.oplus.hardware.commondcs@1.0.so:$(TARGET_COPY_OUT_ODM)/lib64/vendor.oplus.hardware.commondcs@1.0.so \
     vendor/oplus/RMX3360/proprietary/odm/lib64/vendor.oplus.hardware.orms@1.0.so:$(TARGET_COPY_OUT_ODM)/lib64/vendor.oplus.hardware.orms@1.0.so \
+    vendor/oplus/RMX3360/proprietary/odm/lib64/vendor.oplus.hardware.osense.client@1.0.so:$(TARGET_COPY_OUT_ODM)/lib64/vendor.oplus.hardware.osense.client@1.0.so \
     vendor/oplus/RMX3360/proprietary/odm/lib64/vendor.oplus.hardware.performance@1.0.so:$(TARGET_COPY_OUT_ODM)/lib64/vendor.oplus.hardware.performance@1.0.so \
     vendor/oplus/RMX3360/proprietary/odm/vendor/etc/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_ODM)/vendor/etc/wifi/WCNSS_qcom_cfg.ini \
     vendor/oplus/RMX3360/proprietary/odm/vendor/firmware/ancap64.b00:$(TARGET_COPY_OUT_ODM)/vendor/firmware/ancap64.b00 \
@@ -289,58 +292,11 @@ PRODUCT_COPY_FILES += \
     vendor/oplus/RMX3360/proprietary/odm/vendor/firmware/ancap64.b07:$(TARGET_COPY_OUT_ODM)/vendor/firmware/ancap64.b07 \
     vendor/oplus/RMX3360/proprietary/odm/vendor/firmware/ancap64.mdt:$(TARGET_COPY_OUT_ODM)/vendor/firmware/ancap64.mdt \
     vendor/oplus/RMX3360/proprietary/vendor/bin/cnss-daemon:$(TARGET_COPY_OUT_VENDOR)/bin/cnss-daemon \
-    vendor/oplus/RMX3360/proprietary/vendor/etc/camera/M_Attribute_AG_BMW_1.1.0.model.hardcode:$(TARGET_COPY_OUT_VENDOR)/etc/camera/M_Attribute_AG_BMW_1.1.0.model.hardcode \
     vendor/oplus/RMX3360/proprietary/vendor/etc/init/init.vendor.wlan.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vendor.wlan.rc \
     vendor/oplus/RMX3360/proprietary/vendor/etc/media_codecs_performance_yupik_v1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_yupik_v1.xml \
     vendor/oplus/RMX3360/proprietary/vendor/etc/media_codecs_yupik_v1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_yupik_v1.xml \
     vendor/oplus/RMX3360/proprietary/vendor/etc/media_profiles_yupik_v1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_yupik_v1.xml \
     vendor/oplus/RMX3360/proprietary/vendor/etc/media_yupik_v1/video_system_specs.json:$(TARGET_COPY_OUT_VENDOR)/etc/media_yupik_v1/video_system_specs.json \
-    vendor/oplus/RMX3360/proprietary/vendor/etc/sensors/config/faroe_ak991x_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/faroe_ak991x_0.json \
-    vendor/oplus/RMX3360/proprietary/vendor/etc/sensors/config/faroe_bu52053nvx_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/faroe_bu52053nvx_0.json \
-    vendor/oplus/RMX3360/proprietary/vendor/etc/sensors/config/faroe_default_sensors.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/faroe_default_sensors.json \
-    vendor/oplus/RMX3360/proprietary/vendor/etc/sensors/config/faroe_dynamic_sensors.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/faroe_dynamic_sensors.json \
-    vendor/oplus/RMX3360/proprietary/vendor/etc/sensors/config/faroe_idp_ak991x_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/faroe_idp_ak991x_0.json \
-    vendor/oplus/RMX3360/proprietary/vendor/etc/sensors/config/faroe_idp_lsm6dst_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/faroe_idp_lsm6dst_0.json \
-    vendor/oplus/RMX3360/proprietary/vendor/etc/sensors/config/faroe_idp_lsm6dst_1.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/faroe_idp_lsm6dst_1.json \
-    vendor/oplus/RMX3360/proprietary/vendor/etc/sensors/config/faroe_irq.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/faroe_irq.json \
-    vendor/oplus/RMX3360/proprietary/vendor/etc/sensors/config/faroe_lps22hh_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/faroe_lps22hh_0.json \
-    vendor/oplus/RMX3360/proprietary/vendor/etc/sensors/config/faroe_lsm6dst_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/faroe_lsm6dst_0.json \
-    vendor/oplus/RMX3360/proprietary/vendor/etc/sensors/config/faroe_lsm6dst_1.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/faroe_lsm6dst_1.json \
-    vendor/oplus/RMX3360/proprietary/vendor/etc/sensors/config/faroe_power_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/faroe_power_0.json \
-    vendor/oplus/RMX3360/proprietary/vendor/etc/sensors/config/faroe_qrd_ak991x_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/faroe_qrd_ak991x_0.json \
-    vendor/oplus/RMX3360/proprietary/vendor/etc/sensors/config/faroe_qrd_lsm6dst_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/faroe_qrd_lsm6dst_0.json \
-    vendor/oplus/RMX3360/proprietary/vendor/etc/sensors/config/faroe_qrd_sx932x_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/faroe_qrd_sx932x_0.json \
-    vendor/oplus/RMX3360/proprietary/vendor/etc/sensors/config/faroe_qrd_tmd3702_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/faroe_qrd_tmd3702_0.json \
-    vendor/oplus/RMX3360/proprietary/vendor/etc/sensors/config/faroe_sx932x_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/faroe_sx932x_0.json \
-    vendor/oplus/RMX3360/proprietary/vendor/etc/sensors/config/faroe_tmd3702_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/faroe_tmd3702_0.json \
-    vendor/oplus/RMX3360/proprietary/vendor/etc/sensors/config/faroe_vertigo_ak991x_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/faroe_vertigo_ak991x_0.json \
-    vendor/oplus/RMX3360/proprietary/vendor/etc/sensors/config/faroe_vertigo_lsm6dst_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/faroe_vertigo_lsm6dst_0.json \
-    vendor/oplus/RMX3360/proprietary/vendor/etc/sensors/config/faroe_vertigo_lsm6dst_1.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/faroe_vertigo_lsm6dst_1.json \
-    vendor/oplus/RMX3360/proprietary/vendor/etc/sensors/config/kodiak_bu52053nvx_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/kodiak_bu52053nvx_0.json \
-    vendor/oplus/RMX3360/proprietary/vendor/etc/sensors/config/kodiak_default_sensors.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/kodiak_default_sensors.json \
-    vendor/oplus/RMX3360/proprietary/vendor/etc/sensors/config/kodiak_dynamic_sensors.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/kodiak_dynamic_sensors.json \
-    vendor/oplus/RMX3360/proprietary/vendor/etc/sensors/config/kodiak_idp_ak991x_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/kodiak_idp_ak991x_0.json \
-    vendor/oplus/RMX3360/proprietary/vendor/etc/sensors/config/kodiak_idp_lsm6dst_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/kodiak_idp_lsm6dst_0.json \
-    vendor/oplus/RMX3360/proprietary/vendor/etc/sensors/config/kodiak_idp_lsm6dst_1.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/kodiak_idp_lsm6dst_1.json \
-    vendor/oplus/RMX3360/proprietary/vendor/etc/sensors/config/kodiak_irq.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/kodiak_irq.json \
-    vendor/oplus/RMX3360/proprietary/vendor/etc/sensors/config/kodiak_lps22hh_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/kodiak_lps22hh_0.json \
-    vendor/oplus/RMX3360/proprietary/vendor/etc/sensors/config/kodiak_lsm6dst_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/kodiak_lsm6dst_0.json \
-    vendor/oplus/RMX3360/proprietary/vendor/etc/sensors/config/kodiak_lsm6dst_1.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/kodiak_lsm6dst_1.json \
-    vendor/oplus/RMX3360/proprietary/vendor/etc/sensors/config/kodiak_power_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/kodiak_power_0.json \
-    vendor/oplus/RMX3360/proprietary/vendor/etc/sensors/config/kodiak_qrd_ak991x_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/kodiak_qrd_ak991x_0.json \
-    vendor/oplus/RMX3360/proprietary/vendor/etc/sensors/config/kodiak_qrd_ak991x_1.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/kodiak_qrd_ak991x_1.json \
-    vendor/oplus/RMX3360/proprietary/vendor/etc/sensors/config/kodiak_qrd_lsm6dst_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/kodiak_qrd_lsm6dst_0.json \
-    vendor/oplus/RMX3360/proprietary/vendor/etc/sensors/config/kodiak_qrd_sx932x_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/kodiak_qrd_sx932x_0.json \
-    vendor/oplus/RMX3360/proprietary/vendor/etc/sensors/config/kodiak_qrd_tmd3702_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/kodiak_qrd_tmd3702_0.json \
-    vendor/oplus/RMX3360/proprietary/vendor/etc/sensors/config/kodiak_sx932x_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/kodiak_sx932x_0.json \
-    vendor/oplus/RMX3360/proprietary/vendor/etc/sensors/config/kodiak_tmd3702_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/kodiak_tmd3702_0.json \
-    vendor/oplus/RMX3360/proprietary/vendor/etc/sensors/config/kodiak_vertigo_ak991x_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/kodiak_vertigo_ak991x_0.json \
-    vendor/oplus/RMX3360/proprietary/vendor/etc/sensors/config/kodiak_vertigo_lsm6dst_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/kodiak_vertigo_lsm6dst_0.json \
-    vendor/oplus/RMX3360/proprietary/vendor/etc/sensors/config/kodiak_vertigo_lsm6dst_1.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/kodiak_vertigo_lsm6dst_1.json \
-    vendor/oplus/RMX3360/proprietary/vendor/etc/sensors/config/lahaina_hhg_ak991x_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/lahaina_hhg_ak991x_0.json \
-    vendor/oplus/RMX3360/proprietary/vendor/etc/sensors/config/lahaina_hhg_lsm6dst_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/lahaina_hhg_lsm6dst_0.json \
-    vendor/oplus/RMX3360/proprietary/vendor/etc/sensors/config/lahaina_hhg_sx9302x_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/lahaina_hhg_sx9302x_0.json \
-    vendor/oplus/RMX3360/proprietary/vendor/etc/sensors/config/lahaina_hhg_tmd3702_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/lahaina_hhg_tmd3702_0.json \
     vendor/oplus/RMX3360/proprietary/vendor/etc/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     vendor/oplus/RMX3360/proprietary/vendor/etc/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
     vendor/oplus/RMX3360/proprietary/vendor/firmware/CAMERA_ICP.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/CAMERA_ICP.elf \
@@ -557,7 +513,6 @@ PRODUCT_COPY_FILES += \
     vendor/oplus/RMX3360/proprietary/vendor/lib64/libadreno_app_profiles.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libadreno_app_profiles.so \
     vendor/oplus/RMX3360/proprietary/vendor/lib64/libadreno_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libadreno_utils.so \
     vendor/oplus/RMX3360/proprietary/vendor/lib64/libaidenoiser.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaidenoiser.so \
-    vendor/oplus/RMX3360/proprietary/vendor/lib64/libaidenoiserv2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaidenoiserv2.so \
     vendor/oplus/RMX3360/proprietary/vendor/lib64/libarcsoft_dual_sat.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_dual_sat.so \
     vendor/oplus/RMX3360/proprietary/vendor/lib64/libarcsoft_dual_zoomtranslator.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_dual_zoomtranslator.so \
     vendor/oplus/RMX3360/proprietary/vendor/lib64/libarcsoft_eis_wrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_eis_wrapper.so \

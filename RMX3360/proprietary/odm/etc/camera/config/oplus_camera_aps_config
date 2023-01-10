@@ -96,7 +96,7 @@
   "VendorTag": "com.oplus.aps.params.bokeh",
   "Type": "Int32",
   "Count": "78",
-  "Value": "  0,        2,    1,             0,            0,                     8,                     3456,4608,3456,4608,3456,4608,3456,4608,1,0,        1728,2304,1728,2304,1728,2304,1728,2304,1,0,
+  "Value": "  0,        2,    1,             0,            0,                     8,                     4608,3456,4608,3456,4608,3456,4608,3456,1,0,        2304,1728,2304,1728,2304,1728,2304,1728,1,0,
               180,      2,    1,             0,            0,                     8,                     4000,3000,4000,3000,4000,3000,4000,3000,1,0,        2816,2112,2816,2112,2816,2112,2816,2112,1,0,
               180,      1,    1,             1,            0,                     8,                     4000,3000,4000,3000,4000,3000,4000,3000,1,0,        2816,2112,2816,2112,2816,2112,2816,2112,1,0",
   "Comment": "rotation, mode, dualCalitype,  isTeleMaster, isAppSetBlurintensity, foregroundBlurScale,   masterImageInfo /*struct cameraImageSize_t*/,       slaveImageInfo /*struct cameraImageSize_t*/"
@@ -2057,6 +2057,14 @@
 },
 
 {
+  "VendorTag": "com.oplus.aps.params.gesture",
+  "Type": "float",
+  "Count": "6",
+  "Value": "1, 0.75, 1, 2, 4, 3",
+  "Comment": "maxHandNum, clsSmoothFactor, narutoGesture, detectionFreq, delayFrameCount, scaling"
+},
+
+{
   "VendorTag": "com.oplus.aps.params.facewhiten",
   "Type": "Float",
   "Count": "8",
@@ -2082,6 +2090,13 @@
 
 {
   "VendorTag": "com.oplus.fwkBeauty",
+  "Type": "Int32",
+  "Count": "1",
+  "Value": "1"
+},
+
+{
+  "VendorTag": "com.oplus.aps.iso.jpegtoraw",
   "Type": "Int32",
   "Count": "1",
   "Value": "1"

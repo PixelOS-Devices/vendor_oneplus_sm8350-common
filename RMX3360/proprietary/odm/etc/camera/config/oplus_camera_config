@@ -29,6 +29,20 @@
 },
 
 {
+  "VendorTag": "com.oplus.feature.continuous.gallery.pre.decode.enable",
+  "Type": "Byte",
+  "Count": "1",
+  "Value": "0"
+},
+
+{
+  "VendorTag": "com.oplus.gesture.detect.in.aps",
+  "Type": "Byte",
+  "Count": "1",
+  "Value": "1"
+},
+
+{
   "VendorTag": "com.oplus.track.focus.ultra.wide.support",
   "Type": "Byte",
   "Count": "1",
@@ -103,13 +117,6 @@
   "Type": "Int32",
   "Count": "2",
   "Value": "4000x3000"
-},
-
-{
-  "VendorTag": "com.oplus.front.night.raw.picturesize",
-  "Type": "Int32",
-  "Count": "2",
-  "Value": "3280x2464"
 },
 
 {
@@ -744,8 +751,8 @@
 {
   "VendorTag": "com.oplus.feature.none.sat.rear.mode",
   "Type": "Int32",
-  "Count": "5",
-  "Value": "common,commonVideo,night,superText,street,tiltShift,tiltShiftFastVide"
+  "Count": "6",
+  "Value": "common,commonVideo,night,superText,street,tiltShift"
 },
 
 {
@@ -759,7 +766,14 @@
   "VendorTag": "com.oplus.street.filter.type.list",
   "Type": "Byte",
   "Count": "9",
-  "Value": "OPLUSR0604.cube.rgb.bin,DL_L_B6.cube.rgb.bin,DL_D_G4.cube.rgb.bin,oplus-r-black-gold-1.1-RGB.CUBE.rgb.bin,oplus-r-cyberpunk-RGB.CUBE.rgb.bin,oplus-r-infra-RGB.CUBE.rgb.bin,interstellar_space.bin,bright_coloured.bin"
+  "Value": "Martin.cube.rgb.bin,OPLUSR0604.cube.rgb.bin,DL_L_B6.cube.rgb.bin,DL_D_G4.cube.rgb.bin,oplus-r-black-gold-1.1-RGB.CUBE.rgb.bin,oplus-r-cyberpunk-RGB.CUBE.rgb.bin,oplus-r-infra-RGB.CUBE.rgb.bin,interstellar_space.bin,bright_coloured.bin"
+},
+
+{
+  "VendorTag": "com.hdr.upgrade.bubble.tips.support",
+  "Type": "Byte",
+  "Count": "1",
+  "Value": "1"
 },
 
 {
