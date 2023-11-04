@@ -30,6 +30,8 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #=============================================================================
 
+chp_support=0
+
 function configure_zram_parameters() {
 	MemTotalStr=`cat /proc/meminfo | grep MemTotal`
 	MemTotal=${MemTotalStr:16:8}
@@ -79,25 +81,40 @@ function configure_zram_parameters() {
 
 #/*Add swappiness tunning parameters*/
 function oplus_configure_tunning_swappiness() {
-    MemTotalStr=`cat /proc/meminfo | grep MemTotal`
-    MemTotal=${MemTotalStr:16:8}
+	MemTotalStr=`cat /proc/meminfo | grep MemTotal`
+	MemTotal=${MemTotalStr:16:8}
+	prjname=`getprop ro.boot.prjname`
 
-    if [ $MemTotal -le 6291456 ]; then
-        echo 0 > /proc/sys/vm/vm_swappiness_threshold1
-        echo 0 > /proc/sys/vm/swappiness_threshold1_size
-        echo 0 > /proc/sys/vm/vm_swappiness_threshold2
-        echo 0 > /proc/sys/vm/swappiness_threshold2_size
-    elif [ $MemTotal -le 8388608 ]; then
-        echo 100 > /proc/sys/vm/vm_swappiness_threshold1
-        echo 2000 > /proc/sys/vm/swappiness_threshold1_size
-        echo 120 > /proc/sys/vm/vm_swappiness_threshold2
-        echo 1500 > /proc/sys/vm/swappiness_threshold2_size
-    else
-        echo 100 > /proc/sys/vm/vm_swappiness_threshold1
-        echo 4096 > /proc/sys/vm/swappiness_threshold1_size
-        echo 120 > /proc/sys/vm/vm_swappiness_threshold2
-        echo 2048 > /proc/sys/vm/swappiness_threshold2_size
-    fi
+	if [ $MemTotal -le 6291456 ]; then
+		echo 0 > /proc/sys/vm/vm_swappiness_threshold1
+		echo 0 > /proc/sys/vm/swappiness_threshold1_size
+		echo 0 > /proc/sys/vm/vm_swappiness_threshold2
+		echo 0 > /proc/sys/vm/swappiness_threshold2_size
+	elif [ $MemTotal -le 8388608 ]; then
+		echo 100 > /proc/sys/vm/vm_swappiness_threshold1
+		echo 2000 > /proc/sys/vm/swappiness_threshold1_size
+		echo 120 > /proc/sys/vm/vm_swappiness_threshold2
+		echo 1500 > /proc/sys/vm/swappiness_threshold2_size
+	else
+		if [ $chp_support -eq 1 ]; then
+			if [ "$prjname" == "22101" ]; then
+				echo 60 > /proc/sys/vm/vm_swappiness_threshold1
+				echo 4096 > /proc/sys/vm/swappiness_threshold1_size
+				echo 80 > /proc/sys/vm/vm_swappiness_threshold2
+				echo 2048 > /proc/sys/vm/swappiness_threshold2_size
+			else
+				echo 100 > /proc/sys/vm/vm_swappiness_threshold1
+				echo 4096 > /proc/sys/vm/swappiness_threshold1_size
+				echo 120 > /proc/sys/vm/vm_swappiness_threshold2
+				echo 2048 > /proc/sys/vm/swappiness_threshold2_size
+			fi
+		else
+			echo 100 > /proc/sys/vm/vm_swappiness_threshold1
+			echo 4096 > /proc/sys/vm/swappiness_threshold1_size
+			echo 120 > /proc/sys/vm/vm_swappiness_threshold2
+			echo 2048 > /proc/sys/vm/swappiness_threshold2_size
+		fi
+	fi
 }
 
 #ifdef OPLUS_FEATURE_ZRAM_OPT
@@ -241,6 +258,10 @@ function configure_memory_parameters() {
 	echo 1 > /proc/sys/vm/kswapd_threads
 }
 
+if [ -e "/proc/cont_pte_hugepage/stat" ]; then
+	chp_support=1
+fi
+
 rev=`cat /sys/devices/soc0/revision`
 ddr_type=`od -An -tx /proc/device-tree/memory/ddr_device_type`
 ddr_type4="07"
@@ -316,6 +337,7 @@ echo -6 > /sys/devices/system/cpu/cpu5/sched_load_boost
 echo -6 > /sys/devices/system/cpu/cpu6/sched_load_boost
 echo 0 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/rtg_boost_freq
 echo 0 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/pl
+echo "80 2131200:95" > /sys/devices/system/cpu/cpufreq/policy4/schedutil/target_loads
 
 # configure governor settings for gold+ cluster
 echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy7/scaling_governor
@@ -327,6 +349,7 @@ echo 85 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/hispeed_load
 echo -6 > /sys/devices/system/cpu/cpu7/sched_load_boost
 echo 0 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/rtg_boost_freq
 echo 0 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/pl
+echo "80 2208000:95" > /sys/devices/system/cpu/cpufreq/policy7/schedutil/target_loads
 
 # colocation V3 settings
 echo 691200 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/rtg_boost_freq
