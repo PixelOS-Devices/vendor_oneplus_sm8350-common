@@ -50,13 +50,16 @@ case "$target" in
         case "$soc_hwid" in
             475|515)
                 setprop vendor.media.target_variant "_yupik_v0"
-                if [ $build_codename -le "13" ]; then
+                #likai.lu@MULTIMEDIA.MEDIASERVER.PLAYER, 2023/09/26,
+                #remove the limit of Android version for Android U upgrade
+                #if [ $build_codename -le "13" ]; then
                     setprop vendor.netflix.bsp_rev "Q7325-SPY-33758-1"
                     #Ziwei.Liao@MULTIMEDIA.MEDIASERVER.PLAYER, 2023/03/03,
                     #add ro.netflix.bsp_rev to support Netflix Widevine L1 function.
                     setprop ro.netflix.bsp_rev "Q7325-SPY-33758-1"
                     #add ro.netflix.bsp_rev end
-                fi
+                #fi
+                #remove the limit of Android version end
                 sku_ver=`cat /sys/devices/platform/soc/aa00000.qcom,vidc/sku_version` 2> /dev/null
                 if [ $sku_ver -eq 1 ]; then
                     setprop vendor.media.target_variant "_yupik_v1"
@@ -83,13 +86,16 @@ case "$target" in
                 else
                     setprop vendor.media.target_variant "_lahaina"
                 fi
-                if [ $build_codename -le "13" ]; then
+                #likai.lu@MULTIMEDIA.MEDIASERVER.PLAYER, 2023/09/26,
+                #remove the limit of Android version for Android U upgrade
+                #if [ $build_codename -le "13" ]; then
                     setprop vendor.netflix.bsp_rev "Q875-32408-1"
                     #Ziwei.Liao@MULTIMEDIA.MEDIASERVER.PLAYER, 2023/03/06,
                     #add ro.netflix.bsp_rev to support Netflix Widevine L1 function.
                     setprop ro.netflix.bsp_rev "Q875-32408-1"
                     #add ro.netflix.bsp_rev end
-                fi
+                #fi
+                #remove the limit of Android version end
                 ;;
         esac
         ;;
