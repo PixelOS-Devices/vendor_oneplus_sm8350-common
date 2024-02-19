@@ -84,7 +84,6 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8350-common/proprietary/odm/lib/vendor.dolby_v3_6.hardware.dms360@2.0.so:$(TARGET_COPY_OUT_ODM)/lib/vendor.dolby_v3_6.hardware.dms360@2.0.so \
     vendor/oneplus/sm8350-common/proprietary/odm/lib/vendor.oplus.hardware.performance-V1-ndk_platform.so:$(TARGET_COPY_OUT_ODM)/lib/vendor.oplus.hardware.performance-V1-ndk_platform.so \
     vendor/oneplus/sm8350-common/proprietary/odm/lib64/lib-virtual-modem-protos.so:$(TARGET_COPY_OUT_ODM)/lib64/lib-virtual-modem-protos.so \
-    vendor/oneplus/sm8350-common/proprietary/odm/lib64/libQnnHtpStub.so:$(TARGET_COPY_OUT_ODM)/lib64/libQnnHtpStub.so \
     vendor/oneplus/sm8350-common/proprietary/odm/lib64/libcommcenterfw.so:$(TARGET_COPY_OUT_ODM)/lib64/libcommcenterfw.so \
     vendor/oneplus/sm8350-common/proprietary/odm/lib64/libcommcenterutils.so:$(TARGET_COPY_OUT_ODM)/lib64/libcommcenterutils.so \
     vendor/oneplus/sm8350-common/proprietary/odm/lib64/libdapparamstorage_v3_6.so:$(TARGET_COPY_OUT_ODM)/lib64/libdapparamstorage_v3_6.so \
@@ -107,13 +106,16 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8350-common/proprietary/odm/lib64/vendor.oplus.hardware.radio@1.0.so:$(TARGET_COPY_OUT_ODM)/lib64/vendor.oplus.hardware.radio@1.0.so \
     vendor/oneplus/sm8350-common/proprietary/system/etc/sysconfig/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml \
     vendor/oneplus/sm8350-common/proprietary/system_ext/bin/dpmd:$(TARGET_COPY_OUT_SYSTEM_EXT)/bin/dpmd \
+    vendor/oneplus/sm8350-common/proprietary/system_ext/bin/qccsyshal@1.2-service:$(TARGET_COPY_OUT_SYSTEM_EXT)/bin/qccsyshal@1.2-service \
     vendor/oneplus/sm8350-common/proprietary/system_ext/bin/tcmd:$(TARGET_COPY_OUT_SYSTEM_EXT)/bin/tcmd \
     vendor/oneplus/sm8350-common/proprietary/system_ext/bin/wfdservice:$(TARGET_COPY_OUT_SYSTEM_EXT)/bin/wfdservice \
     vendor/oneplus/sm8350-common/proprietary/system_ext/etc/dpm/dpm.conf:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/dpm/dpm.conf \
     vendor/oneplus/sm8350-common/proprietary/system_ext/etc/init/dpmd.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/dpmd.rc \
     vendor/oneplus/sm8350-common/proprietary/system_ext/etc/init/tcmd.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/tcmd.rc \
+    vendor/oneplus/sm8350-common/proprietary/system_ext/etc/init/vendor.qti.hardware.qccsyshal@1.2-service.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/vendor.qti.hardware.qccsyshal@1.2-service.rc \
     vendor/oneplus/sm8350-common/proprietary/system_ext/etc/init/wfdservice.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/wfdservice.rc \
     vendor/oneplus/sm8350-common/proprietary/system_ext/etc/permissions/com.qti.dpmframework.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.qti.dpmframework.xml \
+    vendor/oneplus/sm8350-common/proprietary/system_ext/etc/permissions/com.qti.qcc.vendor_qcc.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.qti.qcc.vendor_qcc.xml \
     vendor/oneplus/sm8350-common/proprietary/system_ext/etc/permissions/dpmapi.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/dpmapi.xml \
     vendor/oneplus/sm8350-common/proprietary/system_ext/etc/permissions/qcrilhook.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/qcrilhook.xml \
     vendor/oneplus/sm8350-common/proprietary/system_ext/etc/permissions/qti_libpermissions.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/qti_libpermissions.xml \
@@ -164,6 +166,10 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8350-common/proprietary/system_ext/lib64/libmmparser_lite.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmmparser_lite.so \
     vendor/oneplus/sm8350-common/proprietary/system_ext/lib64/libmmrtpdecoder.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmmrtpdecoder.so \
     vendor/oneplus/sm8350-common/proprietary/system_ext/lib64/libmmrtpencoder.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmmrtpencoder.so \
+    vendor/oneplus/sm8350-common/proprietary/system_ext/lib64/libqcc.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libqcc.so \
+    vendor/oneplus/sm8350-common/proprietary/system_ext/lib64/libqcc_file_agent_sys.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libqcc_file_agent_sys.so \
+    vendor/oneplus/sm8350-common/proprietary/system_ext/lib64/libqccdme.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libqccdme.so \
+    vendor/oneplus/sm8350-common/proprietary/system_ext/lib64/libqccfileservice.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libqccfileservice.so \
     vendor/oneplus/sm8350-common/proprietary/system_ext/lib64/libwfdclient.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libwfdclient.so \
     vendor/oneplus/sm8350-common/proprietary/system_ext/lib64/libwfdcommonutils.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libwfdcommonutils.so \
     vendor/oneplus/sm8350-common/proprietary/system_ext/lib64/libwfdconfigutils.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libwfdconfigutils.so \
@@ -181,8 +187,14 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8350-common/proprietary/system_ext/lib64/vendor.qti.ImsRtpService-V1-ndk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.ImsRtpService-V1-ndk.so \
     vendor/oneplus/sm8350-common/proprietary/system_ext/lib64/vendor.qti.diaghal@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.diaghal@1.0.so \
     vendor/oneplus/sm8350-common/proprietary/system_ext/lib64/vendor.qti.hardware.dpmservice@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.dpmservice@1.0.so \
+    vendor/oneplus/sm8350-common/proprietary/system_ext/lib64/vendor.qti.hardware.qccsyshal@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.qccsyshal@1.0.so \
+    vendor/oneplus/sm8350-common/proprietary/system_ext/lib64/vendor.qti.hardware.qccsyshal@1.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.qccsyshal@1.1.so \
+    vendor/oneplus/sm8350-common/proprietary/system_ext/lib64/vendor.qti.hardware.qccsyshal@1.2-halimpl.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.qccsyshal@1.2-halimpl.so \
+    vendor/oneplus/sm8350-common/proprietary/system_ext/lib64/vendor.qti.hardware.qccsyshal@1.2.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.qccsyshal@1.2.so \
+    vendor/oneplus/sm8350-common/proprietary/system_ext/lib64/vendor.qti.hardware.qccvndhal@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.qccvndhal@1.0.so \
     vendor/oneplus/sm8350-common/proprietary/system_ext/lib64/vendor.qti.imsrtpservice@3.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.imsrtpservice@3.0.so \
     vendor/oneplus/sm8350-common/proprietary/system_ext/lib64/vendor.qti.imsrtpservice@3.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.imsrtpservice@3.1.so \
+    vendor/oneplus/sm8350-common/proprietary/system_ext/lib64/vendor.qti.qccvndhal_aidl-V1-ndk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.qccvndhal_aidl-V1-ndk.so \
     vendor/oneplus/sm8350-common/proprietary/vendor/bin/ATFWD-daemon:$(TARGET_COPY_OUT_VENDOR)/bin/ATFWD-daemon \
     vendor/oneplus/sm8350-common/proprietary/vendor/bin/adpl:$(TARGET_COPY_OUT_VENDOR)/bin/adpl \
     vendor/oneplus/sm8350-common/proprietary/vendor/bin/adsprpcd:$(TARGET_COPY_OUT_VENDOR)/bin/adsprpcd \
@@ -210,8 +222,6 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8350-common/proprietary/vendor/bin/hw/vendor.qti.media.c2@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.media.c2@1.0-service \
     vendor/oneplus/sm8350-common/proprietary/vendor/bin/ims_rtp_daemon:$(TARGET_COPY_OUT_VENDOR)/bin/ims_rtp_daemon \
     vendor/oneplus/sm8350-common/proprietary/vendor/bin/imsdaemon:$(TARGET_COPY_OUT_VENDOR)/bin/imsdaemon \
-    vendor/oneplus/sm8350-common/proprietary/vendor/bin/init.kernel.post_boot-lahaina.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.kernel.post_boot-lahaina.sh \
-    vendor/oneplus/sm8350-common/proprietary/vendor/bin/init.kernel.post_boot-yupik.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.kernel.post_boot-yupik.sh \
     vendor/oneplus/sm8350-common/proprietary/vendor/bin/init.kernel.post_boot.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.kernel.post_boot.sh \
     vendor/oneplus/sm8350-common/proprietary/vendor/bin/init.qcom.sensors.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.sensors.sh \
     vendor/oneplus/sm8350-common/proprietary/vendor/bin/init.qti.chg_policy.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qti.chg_policy.sh \
@@ -307,6 +317,7 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8350-common/proprietary/vendor/etc/display/DPU670.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/DPU670.xml \
     vendor/oneplus/sm8350-common/proprietary/vendor/etc/display/DPU720.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/DPU720.xml \
     vendor/oneplus/sm8350-common/proprietary/vendor/etc/display/DPU7__.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/DPU7__.xml \
+    vendor/oneplus/sm8350-common/proprietary/vendor/etc/display/advanced_sf_offsets.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/advanced_sf_offsets.xml \
     vendor/oneplus/sm8350-common/proprietary/vendor/etc/flp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/flp.conf \
     vendor/oneplus/sm8350-common/proprietary/vendor/etc/gnss_antenna_info.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gnss_antenna_info.conf \
     vendor/oneplus/sm8350-common/proprietary/vendor/etc/gpfspath_oem_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gpfspath_oem_config.xml \
@@ -390,12 +401,16 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8350-common/proprietary/vendor/etc/qconfigpresets.json:$(TARGET_COPY_OUT_VENDOR)/etc/qconfigpresets.json \
     vendor/oneplus/sm8350-common/proprietary/vendor/etc/qcril_database/qcrilNr.db:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/qcrilNr.db \
     vendor/oneplus/sm8350-common/proprietary/vendor/etc/qcril_database/upgrade/config/10.0_config.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/config/10.0_config.sql \
+    vendor/oneplus/sm8350-common/proprietary/vendor/etc/qcril_database/upgrade/config/11.0_config.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/config/11.0_config.sql \
+    vendor/oneplus/sm8350-common/proprietary/vendor/etc/qcril_database/upgrade/config/12.0_config.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/config/12.0_config.sql \
     vendor/oneplus/sm8350-common/proprietary/vendor/etc/qcril_database/upgrade/config/6.0_config.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/config/6.0_config.sql \
     vendor/oneplus/sm8350-common/proprietary/vendor/etc/qcril_database/upgrade/config/7.0_config.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/config/7.0_config.sql \
     vendor/oneplus/sm8350-common/proprietary/vendor/etc/qcril_database/upgrade/config/8.0_config.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/config/8.0_config.sql \
     vendor/oneplus/sm8350-common/proprietary/vendor/etc/qcril_database/upgrade/config/9.0_config.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/config/9.0_config.sql \
     vendor/oneplus/sm8350-common/proprietary/vendor/etc/qcril_database/upgrade/other/0_initial_qcrilnr.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/0_initial_qcrilnr.sql \
     vendor/oneplus/sm8350-common/proprietary/vendor/etc/qcril_database/upgrade/other/10_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/10_version_update_ecc_table.sql \
+    vendor/oneplus/sm8350-common/proprietary/vendor/etc/qcril_database/upgrade/other/11_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/11_version_update_ecc_table.sql \
+    vendor/oneplus/sm8350-common/proprietary/vendor/etc/qcril_database/upgrade/other/12_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/12_version_update_ecc_table.sql \
     vendor/oneplus/sm8350-common/proprietary/vendor/etc/qcril_database/upgrade/other/1_version_intro_qcrilnr.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/1_version_intro_qcrilnr.sql \
     vendor/oneplus/sm8350-common/proprietary/vendor/etc/qcril_database/upgrade/other/2_version_add_wps_config_qcrilnr.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/2_version_add_wps_config_qcrilnr.sql \
     vendor/oneplus/sm8350-common/proprietary/vendor/etc/qcril_database/upgrade/other/3_version_update_wps_config_qcrilnr.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/3_version_update_wps_config_qcrilnr.sql \
@@ -718,6 +733,7 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8350-common/proprietary/vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so \
     vendor/oneplus/sm8350-common/proprietary/vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so \
     vendor/oneplus/sm8350-common/proprietary/vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so \
+    vendor/oneplus/sm8350-common/proprietary/vendor/lib64/hw/vendor.qti.hardware.qccvndhal@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.qccvndhal@1.0-impl.so \
     vendor/oneplus/sm8350-common/proprietary/vendor/lib64/hw/vendor.qti.hardware.qseecom@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.qseecom@1.0-impl.so \
     vendor/oneplus/sm8350-common/proprietary/vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so \
     vendor/oneplus/sm8350-common/proprietary/vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so \
@@ -857,7 +873,6 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8350-common/proprietary/vendor/lib64/libqdi.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqdi.so \
     vendor/oneplus/sm8350-common/proprietary/vendor/lib64/libqdma_file_agent.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqdma_file_agent.so \
     vendor/oneplus/sm8350-common/proprietary/vendor/lib64/libqdp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqdp.so \
-    vendor/oneplus/sm8350-common/proprietary/vendor/lib64/libqdutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqdutils.so \
     vendor/oneplus/sm8350-common/proprietary/vendor/lib64/libqisl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqisl.so \
     vendor/oneplus/sm8350-common/proprietary/vendor/lib64/libqmi.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqmi.so \
     vendor/oneplus/sm8350-common/proprietary/vendor/lib64/libqmi_cci.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqmi_cci.so \
@@ -878,7 +893,6 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8350-common/proprietary/vendor/lib64/libril-db.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libril-db.so \
     vendor/oneplus/sm8350-common/proprietary/vendor/lib64/libril-qc-ltedirectdisc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libril-qc-ltedirectdisc.so \
     vendor/oneplus/sm8350-common/proprietary/vendor/lib64/libril-qc-radioconfig.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libril-qc-radioconfig.so \
-    vendor/oneplus/sm8350-common/proprietary/vendor/lib64/libril-qcril-hook-oem.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libril-qcril-hook-oem.so \
     vendor/oneplus/sm8350-common/proprietary/vendor/lib64/librilqmimiscservices.so:$(TARGET_COPY_OUT_VENDOR)/lib64/librilqmimiscservices.so \
     vendor/oneplus/sm8350-common/proprietary/vendor/lib64/librilqmiservices.so:$(TARGET_COPY_OUT_VENDOR)/lib64/librilqmiservices.so \
     vendor/oneplus/sm8350-common/proprietary/vendor/lib64/librpmb.so:$(TARGET_COPY_OUT_VENDOR)/lib64/librpmb.so \
@@ -938,6 +952,7 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8350-common/proprietary/vendor/lib64/vendor.display.color@1.4.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.color@1.4.so \
     vendor/oneplus/sm8350-common/proprietary/vendor/lib64/vendor.display.color@1.5.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.color@1.5.so \
     vendor/oneplus/sm8350-common/proprietary/vendor/lib64/vendor.display.postproc@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.postproc@1.0.so \
+    vendor/oneplus/sm8350-common/proprietary/vendor/lib64/vendor.oplus.hardware.radio-V1-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.oplus.hardware.radio-V1-ndk_platform.so \
     vendor/oneplus/sm8350-common/proprietary/vendor/lib64/vendor.qti.data.factory@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.data.factory@2.0.so \
     vendor/oneplus/sm8350-common/proprietary/vendor/lib64/vendor.qti.data.factory@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.data.factory@2.1.so \
     vendor/oneplus/sm8350-common/proprietary/vendor/lib64/vendor.qti.data.factory@2.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.data.factory@2.2.so \
@@ -988,6 +1003,7 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8350-common/proprietary/vendor/lib64/vendor.qti.hardware.radio.internal.deviceinfo@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.internal.deviceinfo@1.0.so \
     vendor/oneplus/sm8350-common/proprietary/vendor/lib64/vendor.qti.hardware.radio.lpa@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.lpa@1.0.so \
     vendor/oneplus/sm8350-common/proprietary/vendor/lib64/vendor.qti.hardware.radio.lpa@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.lpa@1.1.so \
+    vendor/oneplus/sm8350-common/proprietary/vendor/lib64/vendor.qti.hardware.radio.lpa@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.lpa@1.2.so \
     vendor/oneplus/sm8350-common/proprietary/vendor/lib64/vendor.qti.hardware.radio.qcrilhook@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.qcrilhook@1.0.so \
     vendor/oneplus/sm8350-common/proprietary/vendor/lib64/vendor.qti.hardware.radio.qtiradio@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.qtiradio@1.0.so \
     vendor/oneplus/sm8350-common/proprietary/vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.qtiradio@2.0.so \
@@ -997,6 +1013,7 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8350-common/proprietary/vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.4.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.qtiradio@2.4.so \
     vendor/oneplus/sm8350-common/proprietary/vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.5.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.qtiradio@2.5.so \
     vendor/oneplus/sm8350-common/proprietary/vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.6.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.qtiradio@2.6.so \
+    vendor/oneplus/sm8350-common/proprietary/vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.7.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.qtiradio@2.7.so \
     vendor/oneplus/sm8350-common/proprietary/vendor/lib64/vendor.qti.hardware.radio.uim@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.uim@1.0.so \
     vendor/oneplus/sm8350-common/proprietary/vendor/lib64/vendor.qti.hardware.radio.uim@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.uim@1.1.so \
     vendor/oneplus/sm8350-common/proprietary/vendor/lib64/vendor.qti.hardware.radio.uim@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.uim@1.2.so \
@@ -1014,12 +1031,24 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8350-common/proprietary/vendor/lib64/vendor.qti.hardware.vpp@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.vpp@2.0.so \
     vendor/oneplus/sm8350-common/proprietary/vendor/lib64/vendor.qti.ims.callcapability@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.ims.callcapability@1.0.so \
     vendor/oneplus/sm8350-common/proprietary/vendor/lib64/vendor.qti.ims.callinfo@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.ims.callinfo@1.0.so \
+    vendor/oneplus/sm8350-common/proprietary/vendor/lib64/vendor.qti.ims.configservice@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.ims.configservice@1.0.so \
+    vendor/oneplus/sm8350-common/proprietary/vendor/lib64/vendor.qti.ims.configservice@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.ims.configservice@1.1.so \
+    vendor/oneplus/sm8350-common/proprietary/vendor/lib64/vendor.qti.ims.connection@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.ims.connection@1.0.so \
     vendor/oneplus/sm8350-common/proprietary/vendor/lib64/vendor.qti.ims.factory@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.ims.factory@1.0.so \
     vendor/oneplus/sm8350-common/proprietary/vendor/lib64/vendor.qti.ims.factory@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.ims.factory@1.1.so \
+    vendor/oneplus/sm8350-common/proprietary/vendor/lib64/vendor.qti.ims.factory@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.ims.factory@2.0.so \
+    vendor/oneplus/sm8350-common/proprietary/vendor/lib64/vendor.qti.ims.factory@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.ims.factory@2.1.so \
+    vendor/oneplus/sm8350-common/proprietary/vendor/lib64/vendor.qti.ims.factory@2.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.ims.factory@2.2.so \
     vendor/oneplus/sm8350-common/proprietary/vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.ims.rcsconfig@1.0.so \
     vendor/oneplus/sm8350-common/proprietary/vendor/lib64/vendor.qti.ims.rcsconfig@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.ims.rcsconfig@1.1.so \
     vendor/oneplus/sm8350-common/proprietary/vendor/lib64/vendor.qti.ims.rcsconfig@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.ims.rcsconfig@2.0.so \
     vendor/oneplus/sm8350-common/proprietary/vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.ims.rcsconfig@2.1.so \
+    vendor/oneplus/sm8350-common/proprietary/vendor/lib64/vendor.qti.ims.rcssip@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.ims.rcssip@1.0.so \
+    vendor/oneplus/sm8350-common/proprietary/vendor/lib64/vendor.qti.ims.rcssip@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.ims.rcssip@1.1.so \
+    vendor/oneplus/sm8350-common/proprietary/vendor/lib64/vendor.qti.ims.rcssip@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.ims.rcssip@1.2.so \
+    vendor/oneplus/sm8350-common/proprietary/vendor/lib64/vendor.qti.ims.rcsuce@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.ims.rcsuce@1.0.so \
+    vendor/oneplus/sm8350-common/proprietary/vendor/lib64/vendor.qti.ims.rcsuce@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.ims.rcsuce@1.1.so \
+    vendor/oneplus/sm8350-common/proprietary/vendor/lib64/vendor.qti.ims.rcsuce@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.ims.rcsuce@1.2.so \
     vendor/oneplus/sm8350-common/proprietary/vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so \
     vendor/oneplus/sm8350-common/proprietary/vendor/lib64/vendor.qti.imsrtpservice@3.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.imsrtpservice@3.0.so \
     vendor/oneplus/sm8350-common/proprietary/vendor/lib64/vendor.qti.latency@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.latency@2.0.so \
@@ -1032,10 +1061,10 @@ PRODUCT_PACKAGES += \
     CneApp \
     IWlanService \
     TimeService \
-    PowerOffAlarm \
     HotwordEnrollmentOKGoogle \
     HotwordEnrollmentXGoogle \
     ImsRcsService \
+    QCC \
     QtiTelephony \
     QtiTelephonyService \
     WfdService \
